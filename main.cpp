@@ -6,6 +6,26 @@ const int SCREEN_HEIGHT = 600;
 const int TILE_SIZE =40;
 const int MAP_WIDTH=SCREEN_WIDTH/TILE_SIZE;
 const int MAP_HEIGHT=SCREEN_HEIGHT/TILE_SIZE;
+class Wall{
+public:
+    int x,y;
+    SDL_Rect rect;
+    bool active;
+    Wall(int startX,int startY){
+        x=startX;
+        y=startY;
+        active =true;
+        rect ={x,y,TILE_SIZE,TILE_SIZE};
+    }
+   void render(SDL_Renderer* renderer) {
+    if (active) {
+        SDL_SetRenderDrawColor(renderer, 150, 75, 0, 255); // Brown color
+        SDL_RenderFillRect(renderer, &rect);
+    }
+}
+
+
+};
 class Game{
  public:
      SDL_Window* window;
