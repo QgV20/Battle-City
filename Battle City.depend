@@ -1,5 +1,7 @@
 # depslib dependency file v1.0
-1742268395 source:d:\battle city\main.cpp
+1742478919 source:d:\battle city\main.cpp
 	<SDL.h>
 	<iostream>
+	<vector>
+	<algorithm>
 
